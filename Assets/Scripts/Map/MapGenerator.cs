@@ -9,6 +9,9 @@ public class MapGenerator : MonoBehaviour
     public Color ColorWal;
     public Color ColorCurveWall;
     public Color ColorEdgeWall;
+    public Color ColorCoinFloor;
+    public Color ColorEnermyFloor;
+    public Color ColorExitFloor;
     // 적 등장 위치
     public Color ColorResponse = new Color(64, 128, 128);
 
