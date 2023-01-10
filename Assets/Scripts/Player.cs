@@ -23,9 +23,9 @@ public class Player : MonoBehaviour
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
 
-        Vector3 moveDir = new Vector3(h, 0, v);
+        Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
-        this.transform.position += moveDir * moveSpeed * Time.deltaTime;
+        transform.Translate(moveDir.normalized * Time.deltaTime * moveSpeed, Space.Self);
 
         /* È¸Àü */
         yRotateMove = Input.GetAxis("Mouse X") * Time.deltaTime * rotateSpeed;
