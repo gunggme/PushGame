@@ -14167,6 +14167,7 @@ GameObject:
   - component: {fileID: 1537273024}
   - component: {fileID: 1537273023}
   - component: {fileID: 1537273025}
+  - component: {fileID: 1537273026}
   m_Layer: 0
   m_Name: Enermy
   m_TagString: Untagged
@@ -14188,12 +14189,12 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.57
-  m_BaseOffset: 1
+  m_Height: 3
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!4 &1537273024
@@ -14224,7 +14225,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9316641efe472479ac38c6fef65895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 824716384}
+  animator: {fileID: 1537273026}
+  player: {fileID: 824716384}
+--- !u!95 &1537273026
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537273021}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 8dc5375583b159c449d8a5953a6dfeb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1971496746
 GameObject:
   m_ObjectHideFlags: 0
