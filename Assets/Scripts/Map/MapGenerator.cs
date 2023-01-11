@@ -28,6 +28,7 @@ public class MapGenerator : MonoBehaviour
     public GameObject Enermy_Floor;
     public GameObject Key_Floor;
     public GameObject Player_Floor;
+    public GameObject Coin_Floor;
 
 
 
@@ -101,9 +102,9 @@ public class MapGenerator : MonoBehaviour
                     floor.transform.position = new Vector3(j * tileSize, 0, i * tileSize);
                 }
                 //동전 생성 위치
-                if (pixelColor == ColorPlayerFloor)
+                if (pixelColor == ColorCoinFloor)
                 {
-                    GameObject floor = GameObject.Instantiate(Player_Floor, Terrain);
+                    GameObject floor = GameObject.Instantiate(Coin_Floor, Terrain);
                     floor.transform.position = new Vector3(j * tileSize, 0, i * tileSize);
                 }
 
