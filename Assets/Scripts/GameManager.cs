@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void GetKey()
     {
-        CoinText.text = Coins.ToString() + " : ¿ø";
+        CoinText.text = Coins.ToString() + "¿ø";
         if (KeyCheck)
         {
             Block.SetActive(false);

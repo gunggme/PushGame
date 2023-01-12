@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public float rotateSpeed = 500.0f;
 
 
-    private void Start()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
     }
