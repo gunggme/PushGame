@@ -12,7 +12,7 @@ public class MapGenEditer : Editor
             base.OnInspectorGUI();
 
             MapGenerator myGenerator = (MapGenerator)target;
-            if(GUILayout.Button("버튼을 눌러 새끼야"))
+            if(GUILayout.Button("버튼을 눌러 주시겠습니까?"))
             {
                 myGenerator.BuildGenerator();
             }
