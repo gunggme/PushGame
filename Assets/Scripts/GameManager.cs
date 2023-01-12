@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool keyCheche;
     public Text CoinText;
     public GameObject Block;
+    public GameObject Clearer;
 
     private void Update()
     {
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         if (KeyCheck)
         {
             Block.SetActive(false);
+            Clearer.SetActive(true);
         }
     }
 
