@@ -5,16 +5,16 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
 
-    public bool KeyCheck = false;
+    public bool KeyChecks = false;
 
     private void Update()
     {
-        KeyCheck = GameManager.KeyCheckCheck;
+        KeyChecks = GameManager.KeyCheckCheck;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (KeyCheck)
+        if (KeyChecks)
         {
             GameManager.KeyCheck = true;
             this.gameObject.SetActive(false);
