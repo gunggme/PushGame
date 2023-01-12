@@ -6,7 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     // 길을 찾아서 이동할 에이전트
     NavMeshAgent navMeshAgent;
-    public Animator animator;
+    Animator animator;
 
     // 에이전트의 목적지
     [SerializeField]
@@ -16,6 +16,7 @@ public class EnemyMove : MonoBehaviour
     {
         // 게임이 시작되면 게임 오브젝트에 부착된 NavMeshAgent 컴포넌트를 가져와서 저장
         navMeshAgent = this.GetComponent<NavMeshAgent>();
+        animator = this.GetComponent<Animator>();
     }
 
     void Update()

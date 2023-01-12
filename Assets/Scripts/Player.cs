@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Transform objectFrontVector;
+    Animator animator;
 
     private float h = 0.0f;
     private float v = 0.0f;
@@ -13,6 +14,12 @@ public class Player : MonoBehaviour
 
     private float yRotate, yRotateMove;
     public float rotateSpeed = 500.0f;
+
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -33,6 +40,8 @@ public class Player : MonoBehaviour
         yRotate = transform.eulerAngles.y + yRotateMove;
 
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotate, 0);
+
+        animator.SetBool("isIdle", !(h == 0 && v == 0));
     }
 
     //private void LateUpdate()

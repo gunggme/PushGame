@@ -14040,7 +14040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectFrontVector: {fileID: 963194228}
   moveSpeed: 10
-  rotateSpeed: 500
+  rotateSpeed: 300
 --- !u!4 &824716384
 Transform:
   m_ObjectHideFlags: 0
@@ -14299,7 +14299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 626d2e2a1b87d4e46b131de092207914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
