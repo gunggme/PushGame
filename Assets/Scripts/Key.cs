@@ -17,7 +17,8 @@ public class Key : MonoBehaviour
         if (KeyChecks)
         {
             GameManager.KeyCheck = true;
-            this.gameObject.SetActive(false);
+            GameManager.Coins -= 7000;
+            gameObject.SetActive(false);
         }
     }
 }

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,28 +16,27 @@ public class GameManager : MonoBehaviour
     public GameObject Block;
     public GameObject Clearer;
 
+    public Menu menu;
+
     private void Update()
     {
         keyCheche = KeyCheckCheck;
         keyCheck = KeyCheck;
 
-        GameOver();
         GetKey();
         KeyGetting();
-        if(Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             Coins = 7000;
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
-            KeyCheck= true;
+            KeyCheck = true;
         }
+
+        GamePause();
     }
 
-    public void GameOver()
-    {
-
-    }
 
     public void GetKey()
     {
@@ -49,9 +50,20 @@ public class GameManager : MonoBehaviour
 
     public void KeyGetting()
     {
-        if(Coins <= 6900)
+        if (Coins <= 6900)
         {
             KeyCheckCheck = true;
+        }
+    }
+
+    void GamePause()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!Menu.isPause)
+                menu.PauseGame();
+            else
+                menu.ContinueGame();
         }
     }
 
